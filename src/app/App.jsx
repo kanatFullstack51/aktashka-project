@@ -7,8 +7,10 @@ function App() {
 
   return (
     <div className="app">
-      <div className='app_inner'></div>
-      <HomePage />
+      <div className='home_page'>
+        <HomePage />
+      </div>
+
       <ProjectPage />
     </div>
   )
