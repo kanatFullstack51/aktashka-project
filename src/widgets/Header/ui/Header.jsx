@@ -88,10 +88,13 @@ const RightSideOfComponent = () => {
 					</div>
 					<div className={styles.phone_consultation}>
 						<div className={styles.phone_consultation_inner}>
-							<p>Нужна Консультация?<br />
-								Перезвоним через 3 минуты <br />
-								<span>Заказать обратный звонок</span>
-							</p>
+							<div className={styles.phone_consultation_text}>
+								<p>Logo</p>
+								<p>Нужна Консультация?<br />
+									Перезвоним через 3 минуты <br />
+									<span>Заказать обратный звонок</span>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -100,7 +103,7 @@ const RightSideOfComponent = () => {
 	)
 }
 
-const LeftSideOfComponent = ({children}) => {
+const LeftSideOfComponent = ({ children }) => {
 	return (
 		<>
 			{children}

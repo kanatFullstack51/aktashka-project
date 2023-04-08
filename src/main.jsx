@@ -8,13 +8,11 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className="main">
-      <div className="main_inner">
-        <Layout>
-          <div className='main_bg'>
-            <App />
-          </div>
-        </Layout>
-      </div>
+      <Layout>
+        <div className='main_bg'>
+          <App />
+        </div>
+      </Layout>
     </div>
 
   </React.StrictMode>,
