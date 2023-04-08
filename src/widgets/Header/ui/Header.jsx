@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Header.module.scss';
 
 export const Header = () => {
+
+	const [call, setCall] = useState(0)
+
+
+	console.log(call)
 	return (
 		<div className={styles.header}>
 			<div className={styles.header_inner}>
@@ -27,11 +32,11 @@ export const Header = () => {
 									<div className={[styles.phone_number_block]}>
 										<div className={styles.phone_number_icon}>
 											<p>
-												Logo
+												icon
 											</p>
 										</div>
 										<div className={styles.phone_number_num}>
-											<p>8 (800) 888 88 88</p>
+											<p onClick={() => setCall(call + 1)}>8 (800) 888 88 88</p>
 											<p>8 (800) 888 88 88</p>
 										</div>
 									</div>
@@ -39,19 +44,29 @@ export const Header = () => {
 								</div>
 								<div className={styles.phone_consultation}>
 									<div className={styles.phone_consultation_inner}>
-										<p>Нужна Консультация?<br />
-											Перезвоним через 3 минуты <br />
-											<span>Заказать обратный звонок</span>
-										</p>
-
+										<div className={styles.phone_consultation_icon}>icon</div>
+										<div className={styles.phone_consultation_text}>
+											<p>Нужна Консультация?<br />
+												Перезвоним через 3 минуты <br />
+												<span>Заказать обратный звонок</span>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className={styles.header_navigation}>
-
+				<div className={styles.navigation}>
+					<div className={styles.navigation_inner}>
+						<ul className={styles.navigation_link}>
+							<li className={styles.navigation_text}>Главная</li>
+							<li className={styles.navigation_text}>Наши проекты</li>
+							<li className={styles.navigation_text}>Расчет стоимости</li>
+							<li className={styles.navigation_text}>Услуги</li>
+							<li className={styles.navigation_text}>Контакты</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
