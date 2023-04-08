@@ -7,13 +7,10 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="main">
+    <div className='main'>
       <Layout>
-        <div className='main_bg'>
-          <App />
-        </div>
+        <App />
       </Layout>
     </div>
-
-  </React.StrictMode>,
+  </React.StrictMode >,
 )

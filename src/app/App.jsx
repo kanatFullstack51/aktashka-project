@@ -6,7 +6,8 @@ import './styles/App.css';
 function App() {
 
   return (
-    <div className="App">
+    <div className="app">
+      <div className='app_inner'></div>
       <HomePage />
       <ProjectPage />
     </div>
