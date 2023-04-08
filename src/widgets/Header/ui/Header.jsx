@@ -5,7 +5,19 @@ import styles from './Header.module.scss';
 export const Header = () => {
 
 	const [call, setCall] = useState(0)
-
+	const listItems =[
+		{
+			name:'Главная'
+		},{
+			name:'Наши проекты'
+		},{
+			name:'Расчет стоимости'
+		},{
+			name:'Услуги'
+		},{
+			name:'Контакты'
+		}
+	]
 
 	console.log(call)
 	return (
@@ -60,11 +72,14 @@ export const Header = () => {
 				<div className={styles.navigation}>
 					<div className={styles.navigation_inner}>
 						<ul className={styles.navigation_link}>
-							<li className={styles.navigation_text}>Главная</li>
-							<li className={styles.navigation_text}>Наши проекты</li>
-							<li className={styles.navigation_text}>Расчет стоимости</li>
-							<li className={styles.navigation_text}>Услуги</li>
-							<li className={styles.navigation_text}>Контакты</li>
+							{/* ИЗМЕНЕНО ТК КОГДА МНОГО ПОВТОРЯЮЩИХСЯ ЭЛЕМЕНТОВ ДЕЛАЙ МАП ТК ЛУЧШЕ ИЗ ПРОИТЕРИРОВАТЬ  */}
+							{listItems
+							.filter((item)=>  typeof item.name === 'string' )
+							.map((item)=>{
+								return(
+									<li className={styles.navigation_text} key={item.name}>{item.name}</li>
+								)
+							})}
 						</ul>
 					</div>
 				</div>
