@@ -1,0 +1,15 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+
+
+.main_bg {
+	max-width: 100%;
+	width: 1170px;
+	height: 100%;
+}
