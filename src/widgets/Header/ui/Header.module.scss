@@ -6,7 +6,9 @@
 	flex-direction: column;
 
 	&_inner {
-		width: 70%;
+		// ЕЩЕ паддинги по бокам
+		width: 100%;
+		// ЗДесь я поменял на 100,тк там верстка хэдера должна быть на 100 %, даже надо убрать родительский блок тк она дублируется 
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -110,6 +112,10 @@
 			font-weight: 400;
 			font-size: 20px;
 		}
+	}
+	.phone_consultation_inner{
+		padding-right: 4%;
+		// сюды падинги справа
 	}
 
 }
