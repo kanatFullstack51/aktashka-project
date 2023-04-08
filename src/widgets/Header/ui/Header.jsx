@@ -23,7 +23,7 @@ export const Header = () => {
 		<div className={styles.header}>
 			<div className={styles.header_inner}>
 				<div className={styles.header_info}>
-					
+
 					<LeftSideOfComponent>
 						<div className={styles.info}>
 							<div className={styles.info_logo_block}>
