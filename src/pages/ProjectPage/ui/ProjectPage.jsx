@@ -7,7 +7,19 @@ export const ProjectPage = () => {
 
 	return (
 		<div className={styles.project_page}>
-			<ProjectComponent />
+			<div className={styles.project_page_inner}>
+				<div className={styles.project_page_wrap}>
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+					<ProjectComponent />
+				</div>
+			</div>
 		</div>
 	)
 
