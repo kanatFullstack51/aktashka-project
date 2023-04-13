@@ -5,6 +5,7 @@ import { houseData } from '../data';
 
 export const ProjectComponent = () => {
 
+
 	return (
 		<div key={houseData.id} className={styles.project_component_wrapper}>
 			<div className={styles.project_component}>

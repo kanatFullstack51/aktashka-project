@@ -17,10 +17,6 @@ export const Header = () => {
 			contacts: 'Контакты'
 		}
 	]
-
-
-
-
 	return (
 		<div className={styles.header}>
 			<div className={styles.header_inner}>

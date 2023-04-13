@@ -6,6 +6,7 @@
 	justify-content: center;
 	flex-direction: column;
 	background-color: #fff;
+
 	&_inner {
 		width: 70%;
 		height: 100%;
@@ -186,12 +187,24 @@
 		font-size: 20px;
 		color: #000000;
 		cursor: pointer;
-	}
+		position: relative;
 
-	&_text:hover {
-		color: rgb(49, 199, 81);
-		border-bottom: 1px solid rgb(49, 199, 81);
-		transition: all 0.3s;
-	}
+		&::after {
+			position: absolute;
+			content: '';
+			width: 0px;
+			height: 2px;
+			background-color: rgb(0, 255, 42);
+			bottom: 0;
+			right: 0;
+			left: 0;
+			transition: all .4s;
+		}
 
+		&:hover {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
 }
