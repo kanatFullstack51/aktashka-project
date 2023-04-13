@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { Modal } from 'src/widgets/Modal';
 import styles from './Header.module.scss';
 
 export const Header = () => {
-
-	const [call, setCall] = useState(0)
 	const listItems = [
 		{
-			name: 'Главная'
+			main: 'Главная'
 		}, {
-			name: 'Наши проекты'
+			projects: 'Наши проекты'
 		}, {
-			name: 'Расчет стоимости'
+			price: 'Расчет стоимости'
 		}, {
-			name: 'Услуги'
+			services: 'Услуги'
 		}, {
-			name: 'Контакты'
+			contacts: 'Контакты'
 		}
 	]
-	console.log(call)
+
+
+
+
 	return (
 		<div className={styles.header}>
 			<div className={styles.header_inner}>
@@ -52,10 +53,38 @@ export const Header = () => {
 						<ul className={styles.navigation_link}>
 							{/* ИЗМЕНЕНО ТК КОГДА МНОГО ПОВТОРЯЮЩИХСЯ ЭЛЕМЕНТОВ ДЕЛАЙ МАП ТК ЛУЧШЕ ИЗ ПРОИТЕРИРОВАТЬ  */}
 							{listItems
-								.filter((item) => typeof item.name === 'string')
+								.filter((item) => typeof item.main === 'string')
 								.map((item) => {
 									return (
-										<li className={styles.navigation_text} key={item.name}>{item.name}</li>
+										<li className={styles.navigation_text} key={item.main}><Link to='/'>{item.main}</Link></li>
+									)
+								})}
+							{listItems
+								.filter((item) => typeof item.projects === 'string')
+								.map((item) => {
+									return (
+										<li className={styles.navigation_text} key={item.projects}><Link to='/projectPage'>{item.projects}</Link></li>
+									)
+								})}
+							{listItems
+								.filter((item) => typeof item.price === 'string')
+								.map((item) => {
+									return (
+										<li className={styles.navigation_text} key={item.price}>{item.price}</li>
+									)
+								})}
+							{listItems
+								.filter((item) => typeof item.services === 'string')
+								.map((item) => {
+									return (
+										<li className={styles.navigation_text} key={item.services}>{item.services}</li>
+									)
+								})}
+							{listItems
+								.filter((item) => typeof item.contacts === 'string')
+								.map((item) => {
+									return (
+										<li className={styles.navigation_text} key={item.contacts}>{item.contacts}</li>
 									)
 								})}
 						</ul>
@@ -68,6 +97,9 @@ export const Header = () => {
 
 
 const RightSideOfComponent = () => {
+
+	const [openModal, setOpenModal] = useState(false)
+
 	return (
 		<div className={styles.phone}>
 			<div className={styles.phone_block}>
@@ -93,11 +125,12 @@ const RightSideOfComponent = () => {
 								<p>Logo</p>
 								<p>Нужна Консультация?<br />
 									Перезвоним через 3 минуты <br />
-									<span>Заказать обратный звонок</span>
+									<span onClick={() => setOpenModal(true)} >Заказать обратный звонок</span>
 								</p>
 							</div>
 						</div>
 					</div>
+					{openModal && <Modal closeModal={setOpenModal} />}
 				</div>
 			</div>
 		</div>

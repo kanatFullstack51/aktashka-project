@@ -11,8 +11,8 @@ export const ProjectPage = () => {
 		<div className={styles.project_page}>
 			<div className={styles.project_page_inner}>
 				<div className={styles.project_page_wrap}>
-					<ProjectComponent key={id} id={id} />
-					<ProjectComponent id={id} />
+					<ProjectComponent />
+					<ProjectComponent />
 				</div>
 			</div>
 		</div>
