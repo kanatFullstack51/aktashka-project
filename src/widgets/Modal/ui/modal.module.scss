@@ -3,26 +3,70 @@
 	width: 100vw;
 	background-color: rgba($color: #000000, $alpha: 0.4);
 	position: fixed;
-	top: 0;
+	top: 0px;
 	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 1000;
 
 	&_content {
 		padding: 20px;
 		border-radius: 12px;
 		background-color: rgb(255, 255, 255);
 		width: 600px;
-		height: 500px;
+		height: 670px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+
+		&_inner {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+
+		&_close {
+			top: 0;
+			right: 0;
+			width: 25px;
+			height: 25px;
+			font-family: Roboto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			position: absolute;
+			cursor: pointer;
+		}
+
+		&_title {
+			margin-top: 40px;
+			font-family: Roboto;
+			font-weight: 400;
+			text-transform: uppercase;
+			font-size: 25px;
+			color: #000000;
+			margin-bottom: 10px;
+		}
+
+		&_subtitle {
+			color: #000000;
+			font-size: 20px;
+			font-family: Roboto;
+			font-weight: 400;
+		}
 	}
 
 	&_form {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		width: 80%;
 		height: 100%;
@@ -31,16 +75,46 @@
 	&_input {
 		margin: 15px 0px;
 		width: 100%;
-		padding: 17px;
+		padding: 20px 15px;
 		font-family: Roboto;
-		font-size: 12px;
+		font-size: 17px;
+		text-transform: uppercase;
 		border-radius: 5px;
-		border: 1px solid black;
+		border: 1px solid rgb(91, 167, 104);
 		outline: none;
 	}
 
+	&_text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-family: Roboto;
+		color: #000000;
+	}
+
+	&_text span {
+		color: #7e7e7e;
+	}
+
 	&_btn {
+		margin: 20px 0px;
 		width: 100%;
 		height: 50px;
+		border: 1px solid rgb(91, 167, 104);
+		outline: none;
+		cursor: pointer;
+		font-family: Roboto;
+		font-size: 16px;
+		text-transform: uppercase;
+		background-color: rgb(91, 167, 104);
+
+		&:hover {
+			background-color: rgb(95, 196, 112);
+		}
+
+		&:visited {
+			color: rgb(0, 0, 0);
+		}
 	}
 }

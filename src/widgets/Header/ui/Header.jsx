@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Modal } from 'src/widgets/Modal';
+
 import styles from './Header.module.scss';
+
+
+import MainLogo from '../../../assets/icons/logo.png'
+import CallLogo from '../../../assets/icons/phone-call.svg'
+import WhatsAppLogo from '../../../assets/icons/whatsapp.svg'
+import TelegramLogo from '../../../assets/icons//telegram.svg'
+import EmailLogo from '../../../assets/icons/email.gif'
 
 export const Header = () => {
 	const listItems = [
@@ -25,9 +33,7 @@ export const Header = () => {
 					<LeftSideOfComponent>
 						<div className={styles.info}>
 							<div className={styles.info_logo_block}>
-								<div className={styles.info_logo}>
-									LOGO
-								</div>
+								<img className={styles.info_logo_img} src={MainLogo} alt="logo" />
 								<div className={styles.info_title}>
 									Проектирование и строительство<br />
 									авторских домов
@@ -35,12 +41,6 @@ export const Header = () => {
 							</div>
 						</div>
 					</LeftSideOfComponent>
-					{/* ЭКЗЕМПЛР РАБОТЫ С ЧИЛДРЕН
-					 ДЛЯ НАГЛЯДНОСТИ ЭТО ГОРАЗДО УДОБНЕЕ КОГДА ТЫ ПОДРАЗДЕЛЯЕШЬ НА КАКИЕ ТО ЧАСТИ КОМПОНЕНТЫ
-					 И ЧТОБЫ ВСЕ ВРЕМЯ НЕ ОТХОДИТЬ МОЖНО ПРОПСОМ ПЕРЕДАТЬ ЧИЛДРЕН 
-					КАК Я И СДЕЛАЛ
-					*/}
-
 
 					<RightSideOfComponent />
 				</div>
@@ -104,25 +104,46 @@ const RightSideOfComponent = () => {
 						<p className={styles.phone_number_title}>Бесплатный звонок по всей России</p>
 						<div className={[styles.phone_number_block]}>
 							<div className={styles.phone_number_icon}>
-								<p>
-									Logo
-								</p>
+								<img
+									className={styles.phone_number_img}
+									src={CallLogo}
+									alt=""
+								/>
 							</div>
 							<div className={styles.phone_number_num}>
-								<p>8 (800) 888 88 88</p>
-								<p>8 (800) 888 88 88</p>
+								<p>8 (962) 266-66-61</p>
+								<p>8 (968) 878-55-88</p>
 							</div>
 						</div>
 
 					</div>
 					<div className={styles.phone_consultation}>
 						<div className={styles.phone_consultation_inner}>
-							<div className={styles.phone_consultation_text}>
-								<p>Logo</p>
-								<p>Нужна Консультация?<br />
-									Перезвоним через 3 минуты <br />
-									<span onClick={() => setOpenModal(true)} >Заказать обратный звонок</span>
-								</p>
+							<div className={styles.phone_consultation_social}>
+								<Link target='_blank' to='https://wa.clck.bar/79688785588'>
+									<img
+										className={styles.phone_consultation_social_icon}
+										src={WhatsAppLogo}
+										alt="whatsApp Logo" />
+								</Link>
+								<Link target='_blank' to='https://t.me/akcstroy'>
+									<img
+										className={styles.phone_consultation_social_icon}
+										src={TelegramLogo}
+										alt="Telegram Logo" />
+								</Link>
+								<img
+									className={styles.phone_consultation_social_icon}
+									src={EmailLogo}
+									alt="Email Logo" />
+							</div>
+
+							<div className={styles.phone_consultation_btn_block}>
+								<button
+									onClick={() => setOpenModal(true)}
+									className={styles.phone_consultation_btn}>
+									Задать вопрос
+								</button>
 							</div>
 						</div>
 					</div>
