@@ -23,6 +23,10 @@ export const Header = () => {
 			services: 'Услуги'
 		}, {
 			contacts: 'Контакты'
+		}, {
+			technologies: 'Технологии'
+		}, {
+			portfolio: 'Портфолио'
 		}
 	]
 	return (
@@ -76,6 +80,19 @@ export const Header = () => {
 										<li className={styles.navigation_text} key={item.services}>{item.services}</li>
 									)
 								})}
+							{listItems
+								.filter((item) => typeof item.technologies === 'string')
+								.map((item) => {
+									return (
+										<li className={styles.navigation_text} key={item.technologies}>{item.technologies}</li>
+									)
+								})}{listItems
+									.filter((item) => typeof item.portfolio === 'string')
+									.map((item) => {
+										return (
+											<li className={styles.navigation_text} key={item.portfolio}>{item.portfolio}</li>
+										)
+									})}
 							{listItems
 								.filter((item) => typeof item.contacts === 'string')
 								.map((item) => {

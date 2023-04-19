@@ -18,7 +18,6 @@ function App() {
             <Route path='/' exact={true} element={<HomePage />} />
             <Route path='/projectPage/' exact={true} element={<ProjectPage />} />
           </Routes >
-
         </Layout>
 
       </div>
