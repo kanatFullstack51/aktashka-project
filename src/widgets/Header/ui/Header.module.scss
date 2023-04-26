@@ -155,22 +155,6 @@
 			align-items: center;
 		}
 
-		&_btn {
-			width: 100%;
-			padding: 15px 15px;
-			font-family: Roboto;
-			font-size: 15px;
-			font-weight: 500;
-			background-color: rgb(91, 167, 104);
-			border: 0;
-			outline: 0;
-			opacity: 1;
-			cursor: pointer;
-
-			&:hover {
-				opacity: 0.9;
-			}
-		}
 
 		&_img_block {
 			width: 25px;

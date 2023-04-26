@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-import { FoundationPage } from 'src/pages/FoundationPage/ui/FoundationPage';
+import { Button } from 'src/widgets/Button';
+import { Calculation } from 'src/components/Calculation';
+import { Foundation } from 'src/components/Foundation';
 import { Modal } from 'src/widgets/Modal';
 import styles from './homePage.module.scss'
 
 export const HomePage = ({ }) => {
 
-	const [openModal, setOpenModal] = useState('')
 
 
 	return (
@@ -19,15 +20,15 @@ export const HomePage = ({ }) => {
 					<div className={styles.home_contact}>
 						<div className={styles.home_contact_inner}>
 							<h3 className={styles.home_contact_title}>Свяжитесь с нами</h3>
-							<button onClick={() => setOpenModal(true)} className={styles.home_btn}>Заказать расчет</button>
+							<div className={styles.home_contact_btn}>
+								<Button children='Получить Расчет'/>
+							</div>
 						</div>
 					</div>
 				</div>
-				{openModal && <Modal closeModal={setOpenModal} />}
 			</div>
-			<FoundationPage />
-
-
+			<Foundation />
+			<Calculation />
 		</>
 	);
 }

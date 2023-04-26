@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Modal } from 'src/widgets/Modal';
-
 import styles from './Header.module.scss';
 
 
@@ -10,6 +8,7 @@ import CallLogo from '../../../assets/icons/phone-call.svg'
 import WhatsAppLogo from '../../../assets/icons/whatsapp.svg'
 import TelegramLogo from '../../../assets/icons//telegram.svg'
 import EmailLogo from '../../../assets/icons/email.gif'
+import { Button } from 'src/widgets/Button';
 
 export const Header = () => {
 	const listItems = [
@@ -111,8 +110,6 @@ export const Header = () => {
 
 const RightSideOfComponent = () => {
 
-	const [openModal, setOpenModal] = useState(false)
-
 	return (
 		<div className={styles.phone}>
 			<div className={styles.phone_block}>
@@ -156,15 +153,10 @@ const RightSideOfComponent = () => {
 							</div>
 
 							<div className={styles.phone_consultation_btn_block}>
-								<button
-									onClick={() => setOpenModal(true)}
-									className={styles.phone_consultation_btn}>
-									Задать вопрос
-								</button>
+								<Button children='Заказать Звонок' />
 							</div>
 						</div>
 					</div>
-					{openModal && <Modal closeModal={setOpenModal} />}
 				</div>
 			</div>
 		</div>

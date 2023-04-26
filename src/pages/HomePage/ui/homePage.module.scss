@@ -57,23 +57,10 @@
 			font-family: Roboto;
 			font-size: 20px;
 		}
+
+		&_btn {
+			width: 60%;
+		}
 	}
 
-	&_btn {
-		font-family: Roboto;
-		font-size: 15px;
-		font-weight: 500;
-		background-color: rgb(38, 202, 65);
-		padding: 13px 50px;
-		border-radius: 10px;
-		border: 0;
-		outline: 0;
-		opacity: 1;
-		margin-bottom: 20px;
-		cursor: pointer;
-	}
-
-	&_btn:hover {
-		background-color: rgb(78, 209, 99);
-	}
 }

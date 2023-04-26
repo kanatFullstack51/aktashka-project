@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Monolit from '../../../assets/img/monolit.jpeg';
 import Cokol from '../../../assets/img/cokol.jpg';
 import Lenta from '../../../assets/img/lenta.jpg';
@@ -9,7 +8,7 @@ import Rostver from '../../../assets/img/fund.jpg';
 import styles from './foundationPage.module.scss'
 
 
-export const FoundationPage = () => {
+export const Foundation = () => {
 	return (
 		<div className={styles.foundation}>
 			<div className={styles.foundation_inner}>
