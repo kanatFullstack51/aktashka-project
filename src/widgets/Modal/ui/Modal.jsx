@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './modal.module.scss'
 import closeIcon from '../../../assets/icons/close-icons.svg'
+import { Input } from 'src/widgets/Input';
+import { Button } from 'src/widgets/Button';
 export const Modal = ({ closeModal }) => {
 
 
@@ -40,34 +42,32 @@ export const Modal = ({ closeModal }) => {
 						<form
 							onSubmit={handleFormSubmit}
 							className={styles.modal_form}>
-							<input
+							<Input
+								projectType='input'
 								onChange={onChangeName}
-								className={styles.modal_input}
-								type="text"
-								placeholder='Имя' />
-							<input
+								placeholder={'Имя'} />
+							<Input
+								projectType='input'
 								onChange={onChangeLastName}
-								className={styles.modal_input}
-								type="text"
-								placeholder='Фамилия' />
-							<input
+								placeholder={'Фамилия'} />
+							<Input
+								projectType='input'
 								onChange={onChangeEmail}
-								className={styles.modal_input}
-								type="text"
-								placeholder='Почта' />
-							<input
+								placeholder={'Почта'} />
+							<Input
+								projectType='input'
 								type='tel'
 								onChange={onChangeNumber}
-								className={styles.modal_input}
-								placeholder="+7 (__) ___-__-__"
+								placeholder={"+7 (__) ___-__-__"}
 								pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
 							/>
 							<p className={styles.modal_text}>Нажимая на кнопку, Вы соглашаетесь
 								<span>с условиями обработки персональных данных</span></p>
-							<button
-								className={styles.modal_btn}>
-								Отправить
-							</button>
+							<Button
+								type='submit'
+								projectType='modal_inner_btn'
+								children={'Заказать звонок'}
+							/>
 						</form>
 					</div>
 				</div>

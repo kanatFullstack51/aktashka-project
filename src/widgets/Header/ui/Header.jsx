@@ -9,6 +9,7 @@ import WhatsAppLogo from '../../../assets/icons/whatsapp.svg'
 import TelegramLogo from '../../../assets/icons//telegram.svg'
 import EmailLogo from '../../../assets/icons/email.gif'
 import { Button } from 'src/widgets/Button';
+import { Modal } from 'src/widgets/Modal';
 
 export const Header = () => {
 	const listItems = [
@@ -110,6 +111,8 @@ export const Header = () => {
 
 const RightSideOfComponent = () => {
 
+	const [openModal, setOpenModal] = useState(false)
+
 	return (
 		<div className={styles.phone}>
 			<div className={styles.phone_block}>
@@ -153,10 +156,14 @@ const RightSideOfComponent = () => {
 							</div>
 
 							<div className={styles.phone_consultation_btn_block}>
-								<Button children='Заказать Звонок' />
+								<Button
+									type='button'
+									onClick={() => setOpenModal(true)}
+									children='Заказать Звонок' />
 							</div>
 						</div>
 					</div>
+					{openModal && <Modal closeModal={setOpenModal} />}
 				</div>
 			</div>
 		</div>

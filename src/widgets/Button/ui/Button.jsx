@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
-import { Modal } from 'src/widgets/Modal';
+import React from 'react';
 import styles from './button.module.scss'
 
-export const Button = ({ children }) => {
-
-	const [openModal, setOpenModal] = useState(false)
-
+export const Button = ({ children, type = "button", projectType = 'modal_btn', ...props }) => {
 	return (
-		<>
-			<button
-				onClick={() => setOpenModal(true)}
-				className={styles.button_btn}>
-				{children}
-			</button>
-			{openModal && <Modal closeModal={setOpenModal} />}
-		</>
-	);
+		<button
+			type={type}
+			className={styles[projectType]}			
+			{...props}>
+			{children}
+		</button>
+	)
+
 }
 

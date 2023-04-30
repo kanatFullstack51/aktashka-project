@@ -8,7 +8,7 @@ import styles from './homePage.module.scss'
 
 export const HomePage = ({ }) => {
 
-
+	const [openModal, setOpenModal] = useState(false)
 
 	return (
 		<>
@@ -21,10 +21,14 @@ export const HomePage = ({ }) => {
 						<div className={styles.home_contact_inner}>
 							<h3 className={styles.home_contact_title}>Свяжитесь с нами</h3>
 							<div className={styles.home_contact_btn}>
-								<Button children='Получить Расчет'/>
+								<Button
+									type='button'
+									onClick={() => setOpenModal(true)}
+									children='Получить Расчет' />
 							</div>
 						</div>
 					</div>
+					{openModal && <Modal closeModal={setOpenModal} />}
 				</div>
 			</div>
 			<Foundation />

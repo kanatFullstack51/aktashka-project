@@ -72,17 +72,7 @@
 		height: 100%;
 	}
 
-	&_input {
-		margin: 15px 0px;
-		width: 100%;
-		padding: 20px 15px;
-		font-family: Roboto;
-		font-size: 17px;
-		text-transform: uppercase;
-		border-radius: 5px;
-		border: 1px solid rgb(91, 167, 104);
-		outline: none;
-	}
+
 
 	&_text {
 		display: flex;
@@ -97,24 +87,5 @@
 		color: #7e7e7e;
 	}
 
-	&_btn {
-		margin: 20px 0px;
-		width: 100%;
-		height: 50px;
-		border: 1px solid rgb(91, 167, 104);
-		outline: none;
-		cursor: pointer;
-		font-family: Roboto;
-		font-size: 16px;
-		text-transform: uppercase;
-		background-color: rgb(91, 167, 104);
 
-		&:hover {
-			background-color: rgb(95, 196, 112);
-		}
-
-		&:visited {
-			color: rgb(0, 0, 0);
-		}
-	}
 }
