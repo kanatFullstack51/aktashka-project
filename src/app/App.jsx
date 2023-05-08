@@ -16,7 +16,6 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' exact={true} element={<HomePage />} />
-            <Route path='/projectPage/' exact={true} element={<ProjectPage />} />
           </Routes >
         </Layout>
 

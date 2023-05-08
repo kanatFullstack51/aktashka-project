@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Monolit from '../../../assets/img/monolit.jpeg';
-import Cokol from '../../../assets/img/cokol.jpg';
-import Lenta from '../../../assets/img/lenta.jpg';
-import Rostver from '../../../assets/img/fund.jpg';
+import Monolit from '../../../assets/img/monolit.png';
+import Cokol from '../../../assets/img/cokol.png';
+import Lenta from '../../../assets/img/lenta.png';
+import Rostver from '../../../assets/img/fund.png';
 
 import styles from './foundationPage.module.scss'
 

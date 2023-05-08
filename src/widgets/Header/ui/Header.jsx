@@ -23,11 +23,7 @@ export const Header = () => {
 			services: 'Услуги'
 		}, {
 			contacts: 'Контакты'
-		}, {
-			technologies: 'Технологии'
-		}, {
-			portfolio: 'Портфолио'
-		}
+		}, 
 	]
 	return (
 		<div className={styles.header}>
@@ -56,14 +52,14 @@ export const Header = () => {
 								.filter((item) => typeof item.main === 'string')
 								.map((item) => {
 									return (
-										<li className={styles.navigation_text} key={item.main}><Link to='/'>{item.main}</Link></li>
+										<li className={styles.navigation_text} key={item.main}>{item.main}</li>
 									)
 								})}
 							{listItems
 								.filter((item) => typeof item.projects === 'string')
 								.map((item) => {
 									return (
-										<li className={styles.navigation_text} key={item.projects}><Link to='/projectPage'>{item.projects}</Link></li>
+										<li className={styles.navigation_text} key={item.projects}>{item.projects}</li>
 									)
 								})}
 							{listItems
@@ -80,19 +76,6 @@ export const Header = () => {
 										<li className={styles.navigation_text} key={item.services}>{item.services}</li>
 									)
 								})}
-							{listItems
-								.filter((item) => typeof item.technologies === 'string')
-								.map((item) => {
-									return (
-										<li className={styles.navigation_text} key={item.technologies}>{item.technologies}</li>
-									)
-								})}{listItems
-									.filter((item) => typeof item.portfolio === 'string')
-									.map((item) => {
-										return (
-											<li className={styles.navigation_text} key={item.portfolio}>{item.portfolio}</li>
-										)
-									})}
 							{listItems
 								.filter((item) => typeof item.contacts === 'string')
 								.map((item) => {

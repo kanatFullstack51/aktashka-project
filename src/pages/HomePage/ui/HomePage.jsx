@@ -4,7 +4,12 @@ import { Button } from 'src/widgets/Button';
 import { Calculation } from 'src/components/Calculation';
 import { Foundation } from 'src/components/Foundation';
 import { Modal } from 'src/widgets/Modal';
+import { BackCall } from 'src/components/BackCall';
+import { Call } from 'src/components/Call';
+import { DoneProject } from 'src/components/DoneProject';
+
 import styles from './homePage.module.scss'
+
 
 export const HomePage = ({ }) => {
 
@@ -32,7 +37,9 @@ export const HomePage = ({ }) => {
 				</div>
 			</div>
 			<Foundation />
-			<Calculation />
+			<BackCall />
+			<Call />
+			<DoneProject />
 		</>
 	);
 }

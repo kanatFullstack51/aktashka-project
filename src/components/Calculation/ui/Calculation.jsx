@@ -7,7 +7,7 @@ import { Select } from 'src/widgets/Select/ui/Select';
 
 export const Calculation = () => {
 
-	const [currentTab, setCurrentTab] = useState(null);
+	const [currentTab, setCurrentTab] = useState(1);
 
 	const tabs = [
 		{
@@ -36,12 +36,11 @@ export const Calculation = () => {
 
 	const handleTabClick = (e) => {
 		setCurrentTab(e.target.id);
-		console.log(e.target.id)
+		console.log(currentTab)
 	}
 
 	const handleNextClick = () => {
-		setCurrentTab(tabs.findIndex((el) => el.id + 1))
-		console.log(setCurrentTab(tabs.findIndex((el) => el.id === tabs.id)))
+		console.log(Number(currentTab))
 	}
 
 
@@ -106,9 +105,24 @@ const GeneralData = () => {
 
 
 	const [rangeValue, setRangeValue] = useState(0)
+	const [basement, setBasement] = useState('')
+	const [floor, setFloorValue] = useState('')
+	const [buildingFrom, setBuildingFrom] = useState('')
 
-	const onRangeValue = (e) => setRangeValue(e.target.value)
 
+	const onRangeValue = e => setRangeValue(e.target.value)
+	const onBasementValue = e => setBasement(e.target.value)
+	const onFloorValue = e => setFloorValue(e.target.value)
+	const onBuildingValue = e => setBuildingFrom(e.target.value)
+
+	const data = {
+		rangeValue,
+		basement,
+		floor,
+		buildingFrom
+	}
+
+	console.log(data)
 
 	return (
 		<div className={styles.general}>
@@ -128,15 +142,17 @@ const GeneralData = () => {
 				<div className={styles.general_select}>
 					<div className={styles.general_select_block}>
 						<span>Цокольный этаж</span>
-						<Select>
+						<Select
+							onChange={onBasementValue}
+						>
 							<option
 								className={styles.general_select_option}
-								value="yes">
+								value="basement yes">
 								Да
 							</option>
 							<option
 								className={styles.general_select_option}
-								value="no">
+								value="basement no">
 								Нет
 							</option>
 						</Select>
@@ -145,18 +161,20 @@ const GeneralData = () => {
 				<div className={styles.general_select}>
 					<div className={styles.general_select_block}>
 						<span>Этажность</span>
-						<Select>
+						<Select
+							onChange={onFloorValue}
+						>
 							<option
 								className={styles.general_select_option}
-								value="1">1
+								value="floor 1">1
 							</option>
 							<option
 								className={styles.general_select_option}
-								value="2">2
+								value="floor 2">2
 							</option>
 							<option
 								className={styles.general_select_option}
-								value="3">3
+								value="floor 3">3
 							</option>
 						</Select>
 					</div>
@@ -164,7 +182,9 @@ const GeneralData = () => {
 				<div className={styles.general_select}>
 					<div className={styles.general_select_block}>
 						<span>Из чего строим</span>
-						<Select>
+						<Select
+							onChange={onBuildingValue}
+						>
 							<option
 								className={styles.general_select_option}
 								value="ceramic">
