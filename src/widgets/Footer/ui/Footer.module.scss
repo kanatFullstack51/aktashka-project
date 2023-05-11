@@ -1,5 +1,62 @@
 .footer {
-	width: 100%;
-	height: 200px;
-	background-color: aquamarine;
+  width: 100%;
+  height: 150px;
+  background-color: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_inner {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_text {
+      font-size: 18px;
+      font-family: Roboto;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_icon {
+      width: 40px;
+    }
+
+    &_phone {
+      margin-right: 20px;
+    }
+
+    &_phone p {
+      font-family: Roboto;
+      font-size: 18px;
+    }
+  }
+
+  &_copyright {
+    font-family: Roboto;
+  }
 }
