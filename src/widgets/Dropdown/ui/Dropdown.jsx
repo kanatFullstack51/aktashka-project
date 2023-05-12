@@ -11,6 +11,7 @@ export const Dropdown = ({ TextContent, TitleContent }) => {
 
   return (
     <div className={styles.dropdown}>
+      <div className={styles.triangle}></div>
       <Button onClick={toggleOpen} projectType="dropdown" children={TitleContent} />
       <CSSTransition in={open} timeout={100} classNames="alert" unmountOnExit>
         <div className={styles.dropdown_content}>{TextContent}</div>

@@ -20,8 +20,10 @@ export const DoneProject = () => {
         <div className={styles.done_block}>
           <div className={styles.done_list}>
             <Dropdown TitleContent={'Более 10 лет на рынке'} TextContent={'Строим монолитные конструкции'} />
-            <Dropdown TitleContent={'Более 10 лет на рынке'} TextContent={'Строим монолитные конструкции'} />
-            <Dropdown TitleContent={'Более 10 лет на рынке'} TextContent={'Строим монолитные конструкции'} />
+            <Dropdown TitleContent={'Ежедневный отчет'} TextContent={'Ежедневный отчет о проделанной работе в любых социальных сетях'} />
+            <Dropdown TitleContent={'Бесплатный замер'} TextContent={'Выезжаем на замер в удобное для Вас время'} />
+            <Dropdown TitleContent={'Гарантия'} TextContent={'Все гарантии прописаны в договоре'} />
+            <Dropdown TitleContent={'Соблюдаем сроки'} TextContent={'Строго следим за сроками строительства'} />
           </div>
         </div>
       </div>

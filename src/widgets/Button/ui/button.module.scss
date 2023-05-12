@@ -1,109 +1,105 @@
 .modal_btn {
-	width: 100%;
-	padding: 15px 15px;
-	font-family: Roboto;
-	font-size: 13px;
-	font-weight: 500;
-	background-color: rgb(91, 167, 104);
-	border: 0;
-	outline: 0;
-	opacity: 1;
-	cursor: pointer;
-	text-transform: uppercase;
+  width: 100%;
+  padding: 15px 15px;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: rgb(91, 167, 104);
+  border: 0;
+  outline: 0;
+  opacity: 1;
+  cursor: pointer;
+  text-transform: uppercase;
 
-	&:hover {
-		opacity: 0.9;
-	}
+  &:hover {
+    opacity: 0.9;
+  }
 }
-
 
 .calculation_btn {
-	display: flex;
-	padding: 15px 10px;
-	font-family: Roboto;
-	font-size: 13px;
-	border: 1px solid rgb(91, 167, 104);
-	outline: none;
-	background: none;
-	color: #ffffff;
-	font-weight: 400;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: all .2s;
+  display: flex;
+  padding: 15px 10px;
+  font-family: Roboto;
+  font-size: 13px;
+  border: 1px solid rgb(91, 167, 104);
+  outline: none;
+  background: none;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
 
-	&:hover {
-		background-color: rgb(91, 167, 104);
-	}
+  &:hover {
+    background-color: rgb(91, 167, 104);
+  }
 }
 
-
 .calculation_tab {
-	padding: 10px 10px;
-	border: none;
-	outline: none;
-	background: none;
-	font-family: Roboto;
-	font-size: 18px;
-	color: #bdbdbd;
-	font-weight: 500;
-	text-transform: uppercase;
-	cursor: pointer;
-	margin: 10px 0px;
-	position: relative;
+  padding: 10px 10px;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: Roboto;
+  font-size: 18px;
+  color: #bdbdbd;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 10px 0px;
+  position: relative;
 
-	&::after {
-		position: absolute;
-		content: '';
-		width: 0px;
-		height: 2px;
-		background-color: rgb(91, 167, 104);
-		bottom: 0;
-		right: 0;
-		left: 0;
-		transition: all .5s;
-	}
+  &::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: rgb(91, 167, 104);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.5s;
+  }
 
-	&:hover {
-		&::after {
-			width: 100%;
-		}
-	}
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
 }
 
 .modal_inner_btn {
-	margin: 20px 0px;
-	width: 100%;
-	height: 50px;
-	border: 1px solid rgb(91, 167, 104);
-	outline: none;
-	cursor: pointer;
-	font-family: Roboto;
-	font-size: 16px;
-	text-transform: uppercase;
-	background-color: rgb(91, 167, 104);
+  margin: 20px 0px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(91, 167, 104);
+  outline: none;
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: rgb(91, 167, 104);
 
-	&:hover {
-		background-color: rgb(95, 196, 112);
-	}
+  &:hover {
+    background-color: rgb(95, 196, 112);
+  }
 
-	&:visited {
-		color: rgb(0, 0, 0);
-	}
+  &:visited {
+    color: rgb(0, 0, 0);
+  }
 }
 
 .dropdown {
-	padding: 10px;
-	width: 100%;
-	height: 100%;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	background-color: transparent;
-	font-family: Roboto;
-	text-align: left;
-	text-transform: uppercase;
-	font-size: 15px;
-	color: #fff;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	background-color: #132432;
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: Roboto;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  background-color: #132432;
+  padding-left: 30px;
 }
