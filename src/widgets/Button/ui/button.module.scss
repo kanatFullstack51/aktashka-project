@@ -14,6 +14,14 @@
   &:hover {
     opacity: 0.9;
   }
+
+  @media (max-width: 1770px) {
+    font-size: 10px;
+  }
+  @media (max-width: 1450px) {
+    padding: 10px 10px;
+    font-size: 10px;
+  }
 }
 
 .calculation_btn {

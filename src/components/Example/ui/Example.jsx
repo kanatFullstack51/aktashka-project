@@ -29,34 +29,28 @@ export const Example = () => {
       <div className={styles.example_inner}>
         <h1 className={styles.example_title}>Пример наших работ</h1>
         <div className={styles.example_img_block}>
-          <img className={styles.example_img} src={exampleIMG1} alt="" />
-          <img className={styles.example_img} src={exampleIMG2} alt="" />
-          <img className={styles.example_img} src={exampleIMG3} alt="" />
-          <img className={styles.example_img} src={exampleIMG4} alt="" />
-        </div>
-        <div className={styles.example_img_block}>
-          <img className={styles.example_img} src={exampleIMG5} alt="" />
-          <img className={styles.example_img} src={exampleIMG6} alt="" />
-          <img className={styles.example_img} src={exampleIMG7} alt="" />
-          <img className={styles.example_img} src={exampleIMG8} alt="" />
-        </div>
-        <div className={styles.example_img_block}>
-          <img className={styles.example_img} src={exampleIMG9} alt="" />
-          <img className={styles.example_img} src={exampleIMG10} alt="" />
-          <img className={styles.example_img} src={exampleIMG11} alt="" />
-          <img className={styles.example_img} src={exampleIMG12} alt="" />
-        </div>
-        <div className={styles.example_img_block}>
-          <img className={styles.example_img} src={exampleIMG13} alt="" />
-          <img className={styles.example_img} src={exampleIMG14} alt="" />
-          <img className={styles.example_img} src={exampleIMG15} alt="" />
-          <img className={styles.example_img} src={exampleIMG16} alt="" />
-        </div>
-        <div className={styles.example_img_block}>
-          <img className={styles.example_img} src={exampleIMG17} alt="" />
-          <img className={styles.example_img} src={exampleIMG18} alt="" />
-          <img className={styles.example_img} src={exampleIMG19} alt="" />
-          <img className={styles.example_img} src={exampleIMG20} alt="" />
+          <div className={styles.example_img_block_inner}>
+            <img className={styles.example_img} src={exampleIMG1} alt="" />
+            <img className={styles.example_img} src={exampleIMG2} alt="" />
+            <img className={styles.example_img} src={exampleIMG3} alt="" />
+            <img className={styles.example_img} src={exampleIMG4} alt="" />
+            <img className={styles.example_img} src={exampleIMG5} alt="" />
+            <img className={styles.example_img} src={exampleIMG6} alt="" />
+            <img className={styles.example_img} src={exampleIMG7} alt="" />
+            <img className={styles.example_img} src={exampleIMG8} alt="" />
+            <img className={styles.example_img} src={exampleIMG9} alt="" />
+            <img className={styles.example_img} src={exampleIMG10} alt="" />
+            <img className={styles.example_img} src={exampleIMG11} alt="" />
+            <img className={styles.example_img} src={exampleIMG12} alt="" />
+            <img className={styles.example_img} src={exampleIMG13} alt="" />
+            <img className={styles.example_img} src={exampleIMG14} alt="" />
+            <img className={styles.example_img} src={exampleIMG15} alt="" />
+            <img className={styles.example_img} src={exampleIMG16} alt="" />
+            <img className={styles.example_img} src={exampleIMG17} alt="" />
+            <img className={styles.example_img} src={exampleIMG18} alt="" />
+            <img className={styles.example_img} src={exampleIMG19} alt="" />
+            <img className={styles.example_img} src={exampleIMG20} alt="" />
+          </div>
         </div>
       </div>
     </div>
