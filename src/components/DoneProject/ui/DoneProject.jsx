@@ -15,7 +15,9 @@ export const DoneProject = () => {
             <h2>374</h2>
             <p>Выполненных проектов</p>
           </div>
-          <ReactPlayer url={video} controls />
+          <div className={styles.done_video}>
+            <ReactPlayer url={video} controls playing muted loop width={'100%'} height={'100%'} />
+          </div>
         </div>
         <div className={styles.done_block}>
           <div className={styles.done_list}>

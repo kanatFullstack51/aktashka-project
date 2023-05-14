@@ -6,31 +6,68 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 1024px) {
+    padding: 20px;
+  }
+  @media (max-width: 820px) {
+  }
+
   &_inner {
     width: 70%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &_nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   &_navigation {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    &_link {
+      @media (max-width: 1024px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+
     &_text {
       font-size: 18px;
       font-family: Roboto;
       cursor: pointer;
-
+      @media (max-width: 1200px) {
+        font-size: 16px;
+      }
+      @media (max-width: 720px) {
+        font-size: 15px;
+      }
+      @media (max-width: 640px) {
+        font-size: 11px;
+      }
+      @media (max-width: 520px) {
+      }
+      @media (max-width: 380px) {
+        font-size: 9px;
+      }
       &:hover {
         opacity: 0.8;
       }
@@ -44,6 +81,18 @@
 
     &_icon {
       width: 40px;
+      @media (max-width: 1200px) {
+        width: 30px;
+      }
+      @media (max-width: 720px) {
+        width: 28px;
+      }
+      @media (max-width: 640px) {
+        width: 26px;
+      }
+      @media (max-width: 520px) {
+        width: 23px;
+      }
     }
 
     &_phone {
@@ -53,10 +102,23 @@
     &_phone p {
       font-family: Roboto;
       font-size: 18px;
+      @media (max-width: 1200px) {
+        font-size: 16px;
+      }
+      @media (max-width: 720px) {
+        font-size: 14px;
+      }
+      @media (max-width: 640px) {
+        font-size: 12px;
+      }
+      @media (max-width: 520px) {
+        font-size: 14px;
+      }
     }
   }
 
   &_copyright {
     font-family: Roboto;
+    font-size: 16px;
   }
 }

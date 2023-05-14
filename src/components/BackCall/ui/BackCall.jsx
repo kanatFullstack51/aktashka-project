@@ -39,7 +39,7 @@ export const BackCall = () => {
       <div className={styles.call_inner}>
         <div className={styles.call_block}>
           <h2 className={styles.call_title}>Получите расчет стоимости фундамента!</h2>
-          <form onClick={onFormSubmit} className={styles.call_form}>
+          <form onSubmit={onFormSubmit} className={styles.call_form}>
             <div className={styles.call_form_inner}>
               <span>Ваш Телефон</span>
               <Input
@@ -72,7 +72,7 @@ export const BackCall = () => {
               </Select>
             </div>
             <div className={styles.call_checkbox_block}>
-              <input onChange={onChangeCheckbox} id="call_checkbox" name="call_checkbox" type="checkbox" className={styles.call_checkbox} />
+              <input id="call_checkbox" name="call_checkbox" type="checkbox" className={styles.call_checkbox} />
               <label for="call_checkbox"></label>
               <p className={styles.call_checkbox_text}>
                 Я соглашаюсь с <span>политикой конфиденциальности</span> сайта
