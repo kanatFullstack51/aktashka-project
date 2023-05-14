@@ -22,6 +22,15 @@
     padding: 10px 10px;
     font-size: 10px;
   }
+
+  @media (max-width: 660px) {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 8px;
+  }
 }
 
 .calculation_btn {
