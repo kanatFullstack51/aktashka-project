@@ -3,6 +3,8 @@ import styles from './modal.module.scss';
 import closeIcon from '../../../assets/icons/close-icons.svg';
 import { Input } from 'src/widgets/Input';
 import { Button } from 'src/widgets/Button';
+import axios from 'axios';
+
 export const Modal = ({ closeModal }) => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -81,15 +83,37 @@ export const Modal = ({ closeModal }) => {
     }
   };
 
+  const success = '123';
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const data = {
-      name: name,
-      lastName: lastName,
-      email: email,
-      number: number,
-    };
-    console.log(data);
+    const TOKEN = '5718685667:AAFlnvj5Z0bWEDINR7GDHR7pCWXttrTIMF8';
+    const CHAT_ID = '-1001790936480';
+    const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    let message = `<b></b>\n`;
+    message += `<b>Отправитель</b> ${name}\n`;
+    message += `<b>Фамилия</b> ${lastName}\n`;
+    message += `<b>Почта</b> ${email}\n`;
+    message += `<b>Номер Телефона</b> ${number}`;
+
+    axios
+      .post(URL_API, {
+        chat_id: CHAT_ID,
+        parse_mode: 'html',
+        text: message,
+      })
+      .then((res) => {
+        name = '';
+        lastName = '';
+        email = '';
+        number = '';
+      })
+      .catch((err) => {
+        console.warn(err);
+      })
+      .finally(() => {
+        console.log('Конец');
+      });
   };
 
   return (
@@ -135,7 +159,6 @@ export const Modal = ({ closeModal }) => {
                 type="tel"
                 placeholder={'+7 (__) ___-__-__'}
               />
-
               <p className={styles.modal_text}>
                 Нажимая на кнопку, Вы соглашаетесь
                 <span>с условиями обработки персональных данных</span>
