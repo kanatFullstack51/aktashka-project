@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { Button } from 'src/widgets/Button';
-import { Calculation } from 'src/components/Calculation';
 import { Foundation } from 'src/components/Foundation';
 import { Modal } from 'src/widgets/Modal';
 import { BackCall } from 'src/components/BackCall';

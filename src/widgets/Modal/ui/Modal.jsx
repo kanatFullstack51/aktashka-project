@@ -88,11 +88,11 @@ export const Modal = ({ closeModal }) => {
     const TOKEN = '5718685667:AAFlnvj5Z0bWEDINR7GDHR7pCWXttrTIMF8';
     const CHAT_ID = '-1001790936480';
     const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-    let message = `<b></b>\n`;
-    message += `<b>Отправитель</b> ${name}\n`;
-    message += `<b>Фамилия</b> ${lastName}\n`;
-    message += `<b>Почта</b> ${email}\n`;
-    message += `<b>Номер Телефона</b> ${number}`;
+    let message = `<b>Заявка с модалки</b>\n`;
+    message += `<b>Отправитель чорт</b> ${name}\n`;
+    message += `<b>Фамилия чорта</b> ${lastName}\n`;
+    message += `<b>Почта чорта</b> ${email}\n`;
+    message += `<b>Номер Телефона чорта</b> ${number}`;
 
     axios
       .post(URL_API, {
@@ -101,15 +101,16 @@ export const Modal = ({ closeModal }) => {
         text: message,
       })
       .then((res) => {
-        name = '';
-        lastName = '';
-        email = '';
-        number = '';
+        setName('');
+        setLastName('');
+        setEmail('');
+        setNumber('');
       })
       .catch((err) => {
         console.warn(err);
       })
       .finally(() => {
+        closeModal(false);
         console.log('Конец');
       });
   };

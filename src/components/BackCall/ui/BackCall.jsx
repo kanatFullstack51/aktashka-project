@@ -27,11 +27,6 @@ export const BackCall = () => {
   const [heightError, setHeightError] = useState('Высота не может быть пустым');
   const [checkboxError, setCheckboxError] = useState('**');
 
-  const [numberText, setNumberText] = useState('Ваш телефон');
-  const [lengthText, setLengthText] = useState('Длина');
-  const [widthText, setWidthText] = useState('Ширина');
-  const [heightText, setHeightText] = useState('Высота');
-
   useEffect(() => {
     if (numberError || lengthError || widthError || heightError || checkboxError) {
       setFormValid(false);
@@ -67,7 +62,8 @@ export const BackCall = () => {
   const SelectHandler = (e) => setSelect(e.target.value);
 
   const CheckboxHandler = () => {
-    if (setCheckbox === false) {
+    setCheckbox(checkbox);
+    if (setCheckbox(false)) {
       setFormValid(false);
     } else {
       setFormValid(true);
@@ -111,7 +107,7 @@ export const BackCall = () => {
     const TOKEN = '5718685667:AAFlnvj5Z0bWEDINR7GDHR7pCWXttrTIMF8';
     const CHAT_ID = '-1001790936480';
     const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-    let message = `<b></b>\n`;
+    let message = `<b>Заяка да жиесть</b>\n`;
     message += `<b>Длина</b> ${length}\n`;
     message += `<b>Ширина</b> ${width}\n`;
     message += `<b>Высота</b> ${height}\n`;
@@ -125,16 +121,18 @@ export const BackCall = () => {
         text: message,
       })
       .then((res) => {
-        length = '';
-        width = '';
-        height = '';
-        number = '';
+        setLength('');
+        setWidth('');
+        setHeight('');
+        setNumber('');
+        setFormValid(false);
       })
       .catch((err) => {
         console.warn(err);
       })
       .finally(() => {
         console.log('Конец');
+        setCheckbox(false);
       });
   };
 
