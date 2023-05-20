@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import styles from './Call.module.scss';
 
 import whatsApp from '../../../assets/icons/whatsapp.svg';
@@ -15,11 +15,14 @@ export const Call = () => {
         <div className={styles.call_right}>
           <div className={styles.call_right_block}>
             <h3>Отправьте проект, эскиз, фото, набросок от руки или просто размеры нам в WhatsApp или Telegram</h3>
-            <p>8 962 266-66-51</p>
-            <p>8 968 878-55-88</p>
+            <p>8 993 363-04-56</p>
             <div className={styles.call_messenger}>
-              <img className={styles.call_whatsApp} src={whatsApp} alt="whatsApp logo" />
-              <img className={styles.call_telegram} src={telegram} alt="telegram logo" />
+              <Link target="_blank" to="https://wa.clck.bar/79933630456">
+                <img className={styles.call_whatsApp} src={whatsApp} alt="whatsApp logo" />
+              </Link>
+              <Link target="_blank" to="https://t.me/akc_stroy">
+                <img className={styles.call_telegram} src={telegram} alt="telegram logo" />
+              </Link>
             </div>
           </div>
         </div>

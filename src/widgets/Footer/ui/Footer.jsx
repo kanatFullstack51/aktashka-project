@@ -83,10 +83,10 @@ export const Footer = () => {
             <p>8 (962) 266-66-61</p>
             <p>8 (968) 878-55-88</p>
           </div>
-          <Link target="_blank" to="https://wa.clck.bar/79688785588">
+          <Link target="_blank" to="https://wa.clck.bar/79933630456">
             <img className={styles.footer_social_icon} src={WhatsAppLogo} alt="whatsApp Logo" />
           </Link>
-          <Link target="_blank" to="https://t.me/akcstroy">
+          <Link target="_blank" to="https://t.me/akc_stroy">
             <img className={styles.footer_social_icon} src={TelegramLogo} alt="Telegram Logo" />
           </Link>
           <img className={styles.footer_social_icon} src={EmailLogo} alt="Email Logo" />

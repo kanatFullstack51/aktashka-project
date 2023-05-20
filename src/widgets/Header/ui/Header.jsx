@@ -112,24 +112,22 @@ const RightSideOfComponent = () => {
       <div className={styles.phone_block}>
         <div className={styles.phone_block_inner}>
           <div className={styles.phone_number}>
-            <p className={styles.phone_number_title}>Бесплатный звонок по всей России</p>
             <div className={[styles.phone_number_block]}>
               <div className={styles.phone_number_icon}>
                 <img className={styles.phone_number_img} src={CallLogo} alt="" />
               </div>
               <div className={styles.phone_number_num}>
-                <p>8 (962) 266-66-61</p>
-                <p>8 (968) 878-55-88</p>
+                <p>8 (993) 363-04-56</p>
               </div>
             </div>
           </div>
           <div className={styles.phone_consultation}>
             <div className={styles.phone_consultation_inner}>
               <div className={styles.phone_consultation_social}>
-                <Link target="_blank" to="https://wa.clck.bar/79688785588">
+                <Link target="_blank" to="https://wa.clck.bar/79933630456">
                   <img className={styles.phone_consultation_social_icon} src={WhatsAppLogo} alt="whatsApp Logo" />
                 </Link>
-                <Link target="_blank" to="https://t.me/akcstroy">
+                <Link target="_blank" to="https://t.me/akc_stroy">
                   <img className={styles.phone_consultation_social_icon} src={TelegramLogo} alt="Telegram Logo" />
                 </Link>
                 <img className={styles.phone_consultation_social_icon} src={EmailLogo} alt="Email Logo" />

@@ -83,8 +83,6 @@ export const Modal = ({ closeModal }) => {
     }
   };
 
-  const success = '123';
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const TOKEN = '5718685667:AAFlnvj5Z0bWEDINR7GDHR7pCWXttrTIMF8';
